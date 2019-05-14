@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 // Insert a task
-                if (etNote.getText().toString().equals("") || existing == true) {
+                if (etNote.getText().toString().equals("") || existing) {
                     Toast.makeText(MainActivity.this, "Not Inserted", Toast.LENGTH_SHORT).show();
                 } else {
                     db.insertNote(etNote.getText().toString(),star);
